@@ -1,0 +1,93 @@
+$redcolor: #e20202;
+$bluecolor: #2b78ab;
+
+
+a {
+    list-style-type: none;
+}
+.header-top-nav {
+    background-color: $redcolor;
+}
+.top-nav-list {
+    margin: 0;
+    ul {
+        display: flex;
+        padding: 0;
+        margin: 0;
+    }
+    ul li {
+        list-style-type: none;
+        padding: 0 1px;
+        
+        a {
+            text-decoration: none;
+            .fa {
+                width: 32px;
+                max-width: 32px;
+                height: 30px;
+                font-weight: 400;
+                vertical-align: middle;
+                text-align: center;
+                background-color: #fff;
+                border-radius: 100%;
+                font-size: 24px;
+                padding-top: 3px;
+            }
+            .fa-facebook {
+                color: #4267b2;
+            }
+            .fa-twitter {
+                color: #38A1F3;
+            }
+            .fa-linkedin {
+                color: #0077B5
+            }
+            .fa-pinterest-p {
+                color: rgb(230, 0, 35);
+            }
+        }
+    }
+}
+.top-nav-search {
+    padding: 3px 0 0 0;
+    float: right;
+    margin: 0;
+    input {
+        border-radius: 5px;
+        border: none;
+        padding-right: 20px;
+        padding-left: 3px;
+        height: 25px;
+    }
+    .top-nav-search-btn {
+        margin-right: 10px;
+        position: absolute;
+        top: 6px;
+        right: 8px;
+        
+    }
+    a:active {
+        color: rgb(163, 163, 163);
+    }
+}
+
+.header-mnu-logo {
+    .header-mnu-log{
+        width: 85px;
+        position: absolute;
+    }
+    .header-mnu-logo-gerb {
+        right: -20px;
+        top: 5px;
+        position: absolute;
+        width: 75px;
+    }
+    h1 {
+        margin: 0;
+        text-transform: uppercase;
+        font-size: 23px;
+        padding-left: 80px;
+        padding-top: 16px;
+        color: $bluecolor;
+    }
+}
