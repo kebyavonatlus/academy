@@ -1,7 +1,4 @@
 $(document).ready(function() {
-
-
-
 	$(".fancybox").fancybox();
 	//Каруселька
 	//Документация: http://owlgraphic.com/owlcarousel/
@@ -32,12 +29,22 @@ $(document).ready(function() {
 	$(".prev_button").click(function() {
 		owl.trigger("owl.prev");
 	});
-
-
-
+	
+	var owlMin = $(".carousel-min");
+	owlMin.owlCarousel({
+		items: 4,
+		autoHeight: true,
+		itemsMobile: true
+	});
+	$(".other-next_button").click(function() {
+		owlMin.trigger("owl.next");
+	});
+	$(".other-prev_button").click(function() {
+		owlMin.trigger("owl.prev");
+	});
 	var owlDown = $(".carousel_down");
 	owlDown.owlCarousel({
-		items : 5,
+		items : 4,
 		autoHeight : false
 	});
 	$(".right_button").click(function() {
@@ -56,22 +63,6 @@ $(document).ready(function() {
 		$("body, html").animate({
 			scrollTop: 0
 		}, 800);
-		return false;
-	});
-	
-	//Аякс отправка форм
-	//Документация: http://api.jquery.com/jquery.ajax/
-	$("#callback").submit(function() {
-		$.ajax({
-			type: "GET",
-			url: "mail.php",
-			data: $("#callback").serialize()
-		}).done(function() {
-			alert("Спасибо за заявку!");
-			setTimeout(function() {
-				$.fancybox.close();
-			}, 1000);
-		});
 		return false;
 	});
 });
